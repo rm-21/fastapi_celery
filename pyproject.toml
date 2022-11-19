@@ -10,11 +10,14 @@ python = "^3.10"
 fastapi = "^0.87.0"
 uvicorn = {extras = ["standard"], version = "^0.19.0"}
 pydantic = "^1.10.2"
+celery = "^5.2.7"
+redis = "^4.3.4"
+flower = "^1.2.0"
+sqlalchemy = "^1.4.44"
+alembic = "^1.8.1"
 
 
 [tool.poetry.group.dev.dependencies]
-pre-commit = "^2.20.0"
-mypy = "^0.991"
 black = "^22.10.0"
 flake8 = "^5.0.4"
 reorder-python-imports = "^3.9.0"
