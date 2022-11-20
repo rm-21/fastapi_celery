@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "fastapi-celery"
+version = "0.1.0"
+description = ""
+authors = ["rm-21 <mittalrishabh181@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.87.0"
+uvicorn = {extras = ["standard"], version = "^0.19.0"}
+pydantic = "^1.10.2"
+celery = "^5.2.7"
+redis = "^4.3.4"
+flower = "^1.2.0"
+sqlalchemy = "^1.4.44"
+alembic = "^1.8.1"
+psycopg2-binary = "^2.9.5"
+watchfiles = "^0.18.1"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^22.10.0"
+flake8 = "^5.0.4"
+reorder-python-imports = "^3.9.0"
+
+[tool.black]
+line-length = 88
+target-version = ['py37', 'py38', 'py39', 'py310', 'py311']
+
+[build-system]
+requires = ["poetry=1.2.2"]
+build-backend = "poetry.core.masonry.api"
