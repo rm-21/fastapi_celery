@@ -13,10 +13,12 @@ RUN apt-get update \
     # cleaning up unused files
     && apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false \
     && rm -rf /var/lib/apt/lists/* \
+    # Update pip
+    && pip install --upgrade pip \
     # Install poetry
     && pip install "poetry==1.2.2" \
     # Set environment to false
-    && RUN poetry config virtualenvs.create false
+    && poetry config virtualenvs.create false
 
 # Requirements are installed here to ensure they will be cached.
 COPY ./pyproject.toml /pyproject.toml
